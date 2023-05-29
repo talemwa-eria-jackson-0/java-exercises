@@ -1,3 +1,7 @@
+/*
+This java class works with the Bicycle class to give outputs of the BicycleAndJava class
+*/
+
 class Account {
     private String ownerName;
     private double balance;
