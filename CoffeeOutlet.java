@@ -16,7 +16,7 @@ class CoffeeOutlet {
     public static void main(String[] args) {
         //declaring variables
         double bags, largeBoxNumber, mediumBoxNumber, smallBoxNumber;
-        double amount;
+        double amount, amountAfterDiscount, discount;
         String inputString;
 
         //initializing variables
@@ -52,6 +52,34 @@ class CoffeeOutlet {
         //amount
         amount = bags * bagPrice;
 
+        // adding discounts
+        if (bags >= 25) {
+            discount = (5.0/100) * amount;
+            amountAfterDiscount = amount - discount;
+        } else if (bags >= 50) {
+            discount = (10.0/100) * amount;
+            amountAfterDiscount = amount -discount;
+        } else if (bags >= 100) {
+            discount = (15.0/100) * amount;
+            amountAfterDiscount = amount -discount;
+        } else if (bags >= 150) {
+            discount = (20.0/100) * amount;
+            amountAfterDiscount = amount -discount;
+        } else if (bags >= 200) {
+            discount = (25.0/100) * amount;
+            amountAfterDiscount = amount -discount;
+        } else if (bags >= 300) {
+            discount = (30.0/100) * amount;
+            amountAfterDiscount = amount -discount;
+        } else {
+            discount = (30.0/100) * amount;
+            amountAfterDiscount = amount -discount;
+        }
+
+        // System.out.println(discount);
+        // System.out.print(amount);
+        // System.out.println(amountAfterDiscount);
+
         //boxes used
         // JOptionPane.showMessageDialog(myFrame, 12%1);
         if (bags == 20) {
@@ -72,7 +100,9 @@ class CoffeeOutlet {
                 dFormat.format(largeBoxNumber) + " large boxes" + " -> " + dFormat.format(largeBoxTotalPrice) + "\n" +  
                 dFormat.format(mediumBoxNumber) + " medium boxes" + " -> " + dFormat.format(mediumBoxTotalPrice) + "\n" +
                 dFormat.format(smallBoxNumber) + " small boxes" + " -> " + dFormat.format(smallBoxTotalPrice) + "\n" +
-                "\nYour total cost is $" + dFormat.format(totalCost) +
+                "\nYour total cost is $" + dFormat.format(totalCost) + "\n" +
+                "\nDiscount:  " + dFormat.format(discount) + 
+                "\nTotal cost after discount: " + dFormat.format(amountAfterDiscount) + "\n" +
                 "\n\nDate of order:\t" + sDateFormat.format(today)
             );
 
@@ -99,6 +129,8 @@ class CoffeeOutlet {
                     dFormat.format(mediumBoxNumber) + " medium boxes" + " -> " + dFormat.format(mediumBoxTotalPrice) + "\n" +
                     dFormat.format(smallBoxNumber) + " small boxes" + " -> " + dFormat.format(smallBoxTotalPrice) + "\n" +
                     "\nYour total cost is $" + dFormat.format(totalCost) +
+                    "\nDiscount:  " + dFormat.format(discount) + 
+                    "\nTotal cost after discount: " + dFormat.format(amountAfterDiscount) + "\n" +
                     "\n\nDate of order:\t" + sDateFormat.format(today)
                 );
     
@@ -122,6 +154,8 @@ class CoffeeOutlet {
                     dFormat.format(mediumBoxNumber) + " medium boxes" + " -> " + dFormat.format(mediumBoxTotalPrice) + "\n" +
                     dFormat.format(smallBoxNumber) + " small boxes" + " -> " + dFormat.format(smallBoxTotalPrice) + "\n" +
                     "\nYour total cost is $" + dFormat.format(totalCost) +
+                    "\nDiscount:  " + dFormat.format(discount) + 
+                    "\nTotal cost after discount: " + dFormat.format(amountAfterDiscount) + "\n" +
                     "\n\nDate of order:\t" + sDateFormat.format(today)
                 );
     
@@ -146,6 +180,8 @@ class CoffeeOutlet {
                     dFormat.format(mediumBoxNumber) + " medium boxes" + " -> " + dFormat.format(mediumBoxTotalPrice) + "\n" +
                     dFormat.format(smallBoxNumber) + " small boxes" + " -> " + dFormat.format(smallBoxTotalPrice) + "\n" +
                     "\nYour total cost is $" + dFormat.format(totalCost) +
+                    "\nDiscount:  " + dFormat.format(discount) + 
+                    "\nTotal cost after discount: " + dFormat.format(amountAfterDiscount) + "\n" +
                     "\n\nDate of order:\t" + sDateFormat.format(today)
                 );
     
@@ -172,6 +208,8 @@ class CoffeeOutlet {
                     dFormat.format(mediumBoxNumber) + " medium boxes" + " -> " + dFormat.format(mediumBoxTotalPrice) + "\n" +
                     dFormat.format(smallBoxNumber) + " small boxes" + " -> " + dFormat.format(smallBoxTotalPrice) + "\n" +
                     "\nYour total cost is $" + dFormat.format(totalCost) +
+                    "\nDiscount:  " + dFormat.format(discount) + 
+                    "\nTotal cost after discount: " + dFormat.format(amountAfterDiscount) + "\n" +
                     "\n\nDate of order:\t" + sDateFormat.format(today)
                 );
     
@@ -196,6 +234,8 @@ class CoffeeOutlet {
                     dFormat.format(mediumBoxNumber) + " medium boxes" + " -> " + dFormat.format(mediumBoxTotalPrice) + "\n" +
                     dFormat.format(smallBoxNumber) + " small boxes" + " -> " + dFormat.format(smallBoxTotalPrice) + "\n" +
                     "\nYour total cost is $" + dFormat.format(totalCost) +
+                    "\nDiscount:  " + dFormat.format(discount) + 
+                    "\nTotal cost after discount: " + dFormat.format(amountAfterDiscount) + "\n" +
                     "\n\nDate of order:\t" + sDateFormat.format(today)
                 );
     
@@ -220,6 +260,8 @@ class CoffeeOutlet {
                     dFormat.format(mediumBoxNumber) + " medium boxes" + " -> " + dFormat.format(mediumBoxTotalPrice) + "\n" +
                     dFormat.format(smallBoxNumber) + " small boxes" + " -> " + dFormat.format(smallBoxTotalPrice) + "\n" +
                     "\nYour total cost is $" + dFormat.format(totalCost) +
+                    "\nDiscount:  " + dFormat.format(discount) + 
+                    "\nTotal cost after discount: " + dFormat.format(amountAfterDiscount) + "\n" +
                     "\n\nDate of order:\t" + sDateFormat.format(today)
                 );
     
@@ -244,6 +286,8 @@ class CoffeeOutlet {
                     dFormat.format(mediumBoxNumber) + " medium boxes" + " -> " + dFormat.format(mediumBoxTotalPrice) + "\n" +
                     dFormat.format(smallBoxNumber) + " small boxes" + " -> " + dFormat.format(smallBoxTotalPrice) + "\n" +
                     "\nYour total cost is $" + dFormat.format(totalCost) +
+                    "\nDiscount:  " + dFormat.format(discount) + 
+                    "\nTotal cost after discount: " + dFormat.format(amountAfterDiscount) + "\n" +
                     "\n\nDate of order:\t" + sDateFormat.format(today)
                 );
     
